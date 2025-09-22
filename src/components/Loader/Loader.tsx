@@ -1,8 +1,16 @@
-import type { JSX } from "react";
-import styles from "./Loader.module.css";
+import css from "./Loader.module.css";
 
-const Loader = (): JSX.Element => {
-    return <p className={styles.text}>Loading movies, please wait...</p>;
+interface LoaderProps {
+    text?: string;
+}
+
+const Loader = ({ text = "Loading..." }: LoaderProps) => {
+    return (
+        <div className={css.loaderContainer}>
+            <div className={css.loader}></div>
+            <p>{text}</p>
+        </div>
+    );
 };
 
 export default Loader;

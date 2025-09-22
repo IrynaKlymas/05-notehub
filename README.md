@@ -1,3 +1,3 @@
-04-react-query
+05-notehub
 
-Module 4. React Query and Formik
+Module 5. Mutations with React Query
