@@ -1,45 +1,13 @@
-import css from "./SearchBox.module.css";
-
-
-interface SearchBoxProps {
-
-    value: string;
-
-    onChange: (newValue: string)=> void;
+.input {
+    flex: 1;
+    max-width: 240px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
 }
 
-
-const SearchBox=({
-    value, onChange
+.input:focus {
+    outline: none;
+    border: 2px solid #0b7df8;
 }
-
-: SearchBoxProps)=> {
-
-
-    const handleChange=(e: React.ChangeEvent<HTMLInputElement>)=> {
-        onChange(e.target.value);
-    }
-
-    ;
-
-    return (<input className= {
-            css.input
-        }
-
-        type="text"
-        placeholder="Search notes"
-
-        value= {
-            value
-        }
-
-        onChange= {
-            handleChange
-        }
-
-        />);
-}
-
-;
-
-export default SearchBox;
